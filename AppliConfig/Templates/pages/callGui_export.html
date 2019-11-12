@@ -1,0 +1,81 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'AppliConfig/style.css' %}" />
+
+<DOCTYPE html>
+<html>
+<head>
+<title>Config Edditor Version 1.0</title>
+
+</head>
+<body>
+<div align="center">
+	<table>
+		<tr>
+			<td><h2>
+				<img src="/static/AppliConfig/images/RTEmagicC_S285-sas100K_jpg.jpg">
+				Export fichier de configuration yaml
+				<img src="/static/dqWeb/images/python.gif" id="logo">
+			</h2></td>
+		</tr>
+	</table>
+
+
+<form action="{% url 'AppliConfig:exportMethod' %}" method="post" >
+{% csrf_token %}
+<br>
+
+	<table>
+		<tr>
+			<td><b> Exportation fichier de configuration dans dossier {{context.var}}</b></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center"> Entité (domaine) : </td>
+			<td align="center"> <input disabled type="text" value="{{context.selectedEntity}}" > </td>
+		</tr>
+		<tr>
+			<td align="center"> Fichier de Config.:</td>
+			<td align="center">
+				{% if context.fromMethod == 'EXPORT_FLAG' %}
+					<input  type="text" id="ListeFic" name="ListeFic" value='{{context.SelectedFicName}}' > </td>
+				{% else %}
+					<input  type="text" id="ListeFic" name="ListeFic" value='' > </td>
+				{% endif %}
+				<!--select  id="ListeFic" name="ListeFic">
+					<option value=999> Choisissez ... </option>
+					{% for fic in context.listeFicYaml %}
+						{% if fic == context.selectUserListeTable %}
+						<option selected value={{fic}}> {{fic}} </option>option>
+						{% else %}
+						<option  value={{fic}}> {{fic}} </option>option>
+						{%endif%}
+					{%endfor%}
+				<option value=000> Fin  </option>
+				</select-->
+			</td>
+		</tr>
+		<tr>
+			<td align="center"> Nb lignes max : </td>
+			<td align="center"> <input disabled type="text" id="limitNbLin" name="limitNbLin" value="{{context.nbLignes}}" > </td>
+		</tr>
+		<tr>
+			<td align="center"> Info Exec : </td>
+			{% if context.fromMethod == 'EXPORT_FLAG' %}
+				<td align="center"> <input disabled type="text" size = "50"  value="{{context.msg}}" > </td>
+			{% else %}
+				<td align="center"> <input disabled type="text" size = "50"  value="" > </td>
+			{% endif %}
+			<!--td align="center"> <input disabled type="text" value="{{context.fromMethod}}" > </td-->
+		</tr>
+		<tr>
+			<td align="center" ><input type="submit" value="OK" /></td>
+			<td>&nbsp;</td>	
+			</tr>
+	</table>
+	<a href="http://localhost:8000/appliConfig/admin/"> Retour</a>
+
+</form>
+</div>
+</body>
+</html>

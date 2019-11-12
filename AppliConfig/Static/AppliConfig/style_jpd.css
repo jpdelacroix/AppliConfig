@@ -1,0 +1,156 @@
+
+
+body             { color:black;
+                   background-color:ivory;
+                   margin:0 0 0 0; padding:5 12 5 12;
+                   border-style: solid; border-width: 5;
+                   border-color:NavajoWhite;
+                   font-family:avantgarde,sans-serif;
+                   font-size:11pt; }
+
+img              { margin:5 20 5 10;
+                   border-width:0;
+                   vertical-align:middle; }
+
+a:active         { color: red; }
+a:visited        { color: FireBrick; }
+a:link           { color: #0000bb; }
+a:hover          { color: #df0000; }
+
+h1	           { font-family:times,serif; font-style:normal;
+                   font-weight:bold;  color:FireBrick;
+                   background:blank; border-color: transparent;
+                   border-style: solid; border-width: 1 1 1 1; }
+				   
+h2           { font-family:times,serif; font-style:italic;
+                   font-weight:bold;  color:navy;
+                   background:blank; border-color: transparent;
+                   border-style: solid; border-width: 1 1 1 1; }
+
+h3           { font-family:times,serif; font-style:italic;
+                   font-size: 80%; font-weight:bold;  color:black;
+                   background:blank; border-color: transparent;
+                   border-style: solid; border-width: 1 1 1 1; }				   
+
+h4, h5		   { font-family: avantgarde, sans-serif; }
+
+.h6   			{ color: green; }
+
+.h1              { font-size: 250%; }
+h2               { font-size: 150%;  }
+h3               { font-size: 120%; font-weight: bold; color:navy; }
+h4               { font-size: 103%; font-weight: normal; }
+
+ul               { list-style-type:circle; }
+li               { margin: 3 0 3 0; }
+
+.table1old            { margin: 5 0 5 0;
+                   font-family:sans-serif;
+                   background-color:transparent;
+                   border-style: solid; border-width: 1 1 1 1 ;
+                   border-color:blue; }
+				   
+.table2old           { margin: 5 0 5 0;
+                   font-family:sans-serif;
+                   background-color:red
+                   border-style: solid; border-width: 1 1 1 1 ;
+                   border-color:transparent; }				   
+				   
+
+td_old          { text-align:center; padding: 2 5 2 5; }
+
+.td1 			{
+				font-family:arial, sans-serif;
+				font-size:80%;
+				color:Black;
+				text-align:left;
+				padding: 2 5 2 5;
+				background-color:Beige;
+				border-color:White;
+				border-style:solid;
+				border-width:1px;
+				}
+.tdCas 			{
+				color:Green;
+				font-size:90%;
+				}				
+
+.tr1              { background-color:Bisque; height:15px; }
+
+input            { margin: 0 0 0 5; padding: 1 2 1 2;
+                   background-color:white;
+                   font-size: 100%; font-weight: normal; }
+
+.button          { margin:3 2 3 2;  padding:2 5 2 5;
+                   color:black; background-color:white;
+				   border-style: solid; border-width: 1 2 1 2;
+				   border-color:FireBrick				   }
+
+.button2 		{ 
+				border:none;
+				padding:6px 0 6px 0;
+				border-radius:8px;
+				background:#d34836;
+				font:bold 13px Arial;
+				color:#fff; }
+				
+.button3 		{
+				border:none;
+				padding:12px 0 12px 0;
+				border-radius:75%;
+				border-bottom:7px solid #d34836;
+				font:bold 13px Arial;
+				color:#555;
+				background:#EEE8AA;
+				box-shadow:2px 2px 3px #999;
+				border-top:3px solid #d34836;}
+				
+table {
+border: medium solid #6495ed;
+border-collapse: collapse;
+}
+.table0 {
+border: medium solid transparent;
+border-collapse: collapse;
+width: 80%;
+}
+.table1 {
+border: medium solid #6495ed;
+border-collapse: collapse;
+width: 80%;
+
+}
+th {
+font-family: monospace;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+background-color: #D0E3FA;
+background-image: url(sky.jpg);
+}
+td {
+font-family: sans-serif;
+border: thin solid #6495ed;
+
+padding: 5px;
+text-align: center;
+background-color: transparent;
+}
+caption {
+font-family: sans-serif;
+}
+				
+				
+				
+.b1 			{border-style:none;}
+.b2 			{border-style:hidden;}
+.b3 			{border-style:dotted;}
+.b4 			{border-style:dashed;}
+.b5 			{border-style:solid;}
+.b6 			{border-style:double;}
+.b7 			{border-style:groove;}
+.b8 			{border-style:ridge;}
+.b9 			{border-style:inset;}
+.b10 			{border-style:outset;}
+.b11 			{color:navy;}				
+				   

@@ -1,0 +1,16 @@
+
+BASE_REP = 'C:\\aaa'  
+
+#Extensio des fichiers par défaut
+DEF_EXT_FIC = 'yaml'
+
+#Mode Debug TRUE / FALSE
+debug = True
+
+#Separateur (4 blancs) ou (Tab)
+nbBlankCarSep = 4
+separator = 'esp'
+#separator = 'tab'
+
+
+#Fin de fichier

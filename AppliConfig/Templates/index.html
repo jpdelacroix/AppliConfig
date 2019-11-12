@@ -1,0 +1,12 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    <table>
+        {% for form in formset %}
+        
+        	<tr><td><ul class="list-inline">{{ form.as_ul }}</ul></td></tr>
+
+        {% endfor %}
+    </table>
+    <input type="submit" value="Submit order" class="btn btn-primary">    
+</form>

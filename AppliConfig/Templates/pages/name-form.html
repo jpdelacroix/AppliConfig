@@ -1,0 +1,13 @@
+
+<form action="." method="post" enctype="application/x-www-form-urlencoded">
+
+{% csrf_token %}
+   a: {{ name_form.name.label_tag }}
+   b: {{ name_form.name }}
+   c: {{ name_form.name.errors }}
+   --------------------------------
+   a: {{ name_form.entity.label_tag }}
+   b: {{ name_form.entity }}
+   c: {{ name_form.entity.errors }}
+    <button type="submit">Submit</button>
+</form>

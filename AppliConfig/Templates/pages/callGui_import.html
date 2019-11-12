@@ -1,0 +1,76 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'AppliConfig/style.css' %}" />
+
+<DOCTYPE html>
+<html>
+<head>
+<title>Config Edditor Version 1.0</title>
+
+</head>
+<body>
+<div align="center">
+	<table>
+		<tr>
+			<td><h2>
+				<img src="/static/AppliConfig/images/RTEmagicC_S285-sas100K_jpg.jpg">
+				Import fichier de configuration yaml
+				<img src="/static/AppliConfig/images/gorille.gif" id="logo">
+			</h2></td>
+		</tr>
+	</table>
+
+
+<form action="{% url 'AppliConfig:importMethod' %}" method="post" >
+
+{% csrf_token %}
+<br>
+	<table>
+		<tr>
+			<td><b> Importation fichier de configuration depuis dossier {{context.var}}</b></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td align="center"> Fichier de Config.:</td>
+			<td align="center">
+				<select  id="ListeFic" name="ListeFic">
+					<option value=999> Choisissez ... </option>
+					{% for fic in context.listeFicYaml %}
+						{% if fic == context.selectedEntity %}
+						<option selected value={{fic}}> {{fic}} </option>option>
+						{% else %}
+						<option  value={{fic}}> {{fic}} </option>option>
+						{%endif%}
+					{%endfor%}
+				<option value=000> Fin  </option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="center"> Entité (domaine) : </td>
+			<td align="center"> <input disabled type="text" value="{{context.selectedEntity}}" > </td>
+		</tr>
+		<tr>
+			<td align="center"> Nb lignes max : </td>
+			<td align="center"> <input type="text" id="limitNbLin" name="limitNbLin" size = "6" value="{{context.nbLignes}}" > </td>
+		</tr>
+		<tr>
+			<td align="center"> Info Exec : </td>
+
+			{% if context.fromMethod == 'IMPORT_FLAG' %}
+				<td align="center"> <input disabled type="text" size = "50" value="{{context.msg}}" > </td>
+			{% else %}
+				<td align="center"> <input disabled type="text" size = "50" value="" > </td>
+			{% endif %}
+			<!--td align="center"> <input disabled type="text" value="{{context.fromMethod}}" > </td-->
+		</tr>
+		<tr>
+			<td align="center" ><input type="submit" value="OK" /></td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<a href="http://localhost:8000/appliConfig/admin/"> Retour</a>
+</form>
+</div>
+</body>
+</html>

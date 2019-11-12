@@ -1,0 +1,52 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'AppliConfig/style.css' %}" />
+
+<DOCTYPE html>
+<html>
+<head>
+<title>Constat Anomalie  (page beta)</title>
+
+</head>
+<body>
+<div align="center">
+	<table>
+		<tr>
+			<td><h2>
+				<img src="/static/AppliConfig/images/RTEmagicC_S285-sas100K_jpg.jpg">
+				Constat Anomalie Probable (version beta)
+				<!--img src="/static/AppliConfig/images/gorille.gif" id="logo"-->
+			</h2></td>
+		</tr>
+	</table>
+
+{% csrf_token %}
+<br>
+	<table class = "table0">
+	<tr>
+
+	{% if  context.msg1 != '' %}
+			<td><h2> {{context.msg1}} </h2></td>
+		</tr>
+		<tr>
+			<td> {{context.SelectedFicName}} </td>
+		</tr>
+		<tr>
+			<td> Vers la ligne : {{context.nbCheck}} </td>
+		</tr>
+	{% endif %}
+	<tr><td>&nbsp;</td></tr>
+	{% if  context.msg2 != '' %}
+			<td><h2> {{context.msg2}} </h2></td>
+		</tr>
+	{% endif %}	
+	<tr><td>&nbsp;</td></tr>
+	<tr>
+		<td><h3><a href="{% url 'AppliConfig:callGui_import'%}"> Retour </a></h3></td>
+	</tr>
+</table>
+
+</form>
+</div>
+</body>
+</html>

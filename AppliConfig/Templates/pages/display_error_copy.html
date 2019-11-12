@@ -1,0 +1,40 @@
+{% load static %}
+
+<!--link rel="stylesheet" type="text/css" href="{% static 'cas_action/style.css' %}" /-->
+<html>
+<center>
+
+<!-- ********************************* FORM 1 CHOIX FICHIER ET RETOUR ******************************************* -->
+<form  action="{% url 'AppliConfig:enTravaux' %}" method="post" enabled=True>
+{% csrf_token %}
+<body>
+<table class="table1">
+	<tr>
+		<td><h2><img src="/static/AppliConfig/images/RTEmagicC_S285-sas100K_jpg.jpg" /></h2></td>
+		<td><h2> AppliConfig Display Error  </h2></td>
+	</tr>
+</table>
+<hr>
+</center>
+
+<left>
+<table class = "table0">
+	<tr>
+		<td><h2> {{context.msg}}</h2></td>
+	</tr>
+	<tr>
+		<td><h2> {{context.SelectedFicName}} </h2></td>
+
+		{% if  context.dictFlag.flag1 == -1 %}
+			<td><h3>Message :</h3></td>
+			<td><h3> {{context.form.msg}} </h3></td>
+		{% endif %}	
+	</tr>
+	<tr>
+		<td><a href="{% url 'AppliConfig:callGui_import'%}"> Retour </a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</form >
